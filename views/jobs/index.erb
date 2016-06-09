@@ -21,17 +21,15 @@
   </div>
 </nav>
 
-<section id="index" class="container content-section text-center">
-  <div class="text-container" id="index">
+
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-centered col-md-6 col-sm-6 col-xs-10 pad-top content-section text-center">
       <% @jobs.each do |jobs| %>
+      <div class="panel panel-default job-panel" id="index">
+        <div class="panel-body">
     <!-- Beginning of Job listings -->
 
-        <a href="/jobs/<%=jobs.id%>">
-        <img src="<%= jobs.logo_url %>">
-      </a>
-        <ul class="list-inline">
+        <ul>
           <li>
             <h2>
               <a href="/jobs/<%= jobs.id %>">
@@ -49,6 +47,10 @@
               <%= jobs.location %>
             </h4>
           </li>
+        </ul>
+        </div>
+        <div class="panel-footer">
+        <ul>
           <li>
             <a href="/jobs/<%=jobs.id %>/edit">
               Edit
@@ -60,9 +62,9 @@
             </form>
           </li>
         </ul>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
-</div>
-</section>
 </div>
