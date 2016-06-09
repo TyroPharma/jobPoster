@@ -1,4 +1,57 @@
-<div class="row pad-top">
-  <div class="jumbotron">
-    <p>Welcome to jobPoster!</p>
-    
+<div class="background">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand pull-left">jobPoster</a>
+    </div>
+    <div class="navbar-right pull-right">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#about" class="page-scroll">About</a>
+        </li>
+        <!-- create job post route -->
+        <li>
+          <a href="/jobs/new">Post Job</a>
+        </li>
+        <li>
+          <a href="#top" class="page-scroll">Login/Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>Need a job? Look no further!</h1>
+          <h3>Welcome to jobPoster!</h3>
+          <h3>Job hunting made easy!</h3>
+          <form class="search-form" action="/jobs" method="GET" id="search-form">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                  <span class="input-group-btn">
+              <button class="btn btn-dark" type="submit"><i class="glyphicon glyphicon-search"></i>Find Jobs
+              </button>
+            </span>
+      </div>
+    </div>
+  </div>
+</form>
+  </div>
+  </div>
+</div>
+</div>
+</header>
+</div>
+  <div>
+    <%= erb :about %>
+  </div>
+  <div>
+    <%= erb :footer %>
+  </div>

@@ -1,0 +1,52 @@
+<div class="background">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand pull-left">jobPoster</a>
+    </div>
+    <div class="navbar-right pull-right">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#about" class="page-scroll">About</a>
+        </li>
+        <!-- create job post route -->
+        <li>
+          <a href="/jobs/new">Post Job</a>
+        </li>
+        <li>
+          <a href="#top" class="page-scroll">Login/Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" id="show">
+<section class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-2">
+          <h2 class="jobdescript">Job Description</h2>
+          <div id="jobdescsec">
+            <ul>
+              <li>
+                <h3>Job Title: <%= @job.title %></h3>
+              </li>
+              <li>
+                <h3> Company: <%= @job.company %></h3>
+              </li>
+              <li>
+                <h3> Location: <%= @job.location %></h3>
+              </li>
+              <li>
+                <h3> Contact: <%= @job.contact %></h3>
+              </li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <p><%= @job.description %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
