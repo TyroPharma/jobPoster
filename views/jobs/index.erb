@@ -35,7 +35,7 @@
 
         <ul class="nav">
           <li>
-            <h2>
+            <h2 class="text-center">
               <a href="/jobs/<%= job.id %>">
                 <%= job.title %>
               </a>
@@ -45,12 +45,12 @@
           <br>
           <li>
             <h4>
-              <%= job.company %>
+              Company: <%= job.company %>
             </h4>
           </li>
           <li>
             <h4>
-              <%= job.location %>
+              Location: <%= job.location %>
             </h4>
           </li>
         </ul>
@@ -59,13 +59,13 @@
         <ul class="list-inline">
           <li>
             <a href="/jobs/<%=job.id %>/edit">
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
             </a>
           </li>
           <li>
             <form action="/jobs/<%= job.id %>/delete" method="POST">
               <button id="deletebutton" type="submit" >
-              <i type="submit"  class="fa fa-trash" aria-hidden="true"></i>
+              <i type="submit"  class="fa fa-trash fa-lg" aria-hidden="true"></i>
             </button>
             </form>
           </li>
