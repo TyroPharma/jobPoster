@@ -14,20 +14,20 @@ Technologies:
 
 ##Technologies
 
-*Sinatra
-*Ruby
-*PostgresSQL database
-*Bootstrap
+* Sinatra
+* Ruby
+* PostgresSQL database
+* Bootstrap
 
 ![img](bottom-home.png)
 
 ##Setup
 
-*clone or download this repo
-*Run 'bundle install'
-*Run 'rerun 'rackup''
-*Type 'localhost:9292' in the browser url bar
-*Happy job hunting!
+* clone or download this repo
+* Run 'bundle install'
+* Run 'rerun 'rackup''
+* Type 'localhost:9292' in the browser url bar
+* Happy job hunting!
 
 ![img](index.png)
 
@@ -43,16 +43,16 @@ The search function is currently commented out because I am still debugging it.
 
 ##Wishlist features
 
-*Would love to create a User database with user authentication, messaging, comments, and likes.
+* Would love to create a User database with user authentication, messaging, comments, and likes.
 
-*Also would love to set up an AJAX call to github/jobs/api to seed my jobs database. If all these "wishes" were to be accomplished then I'd feel that this project would be close to complete.
+* Also would love to set up an AJAX call to github/jobs/api to seed my jobs database. If all these "wishes" were to be accomplished then I'd feel that this project would be close to complete.
 
 ##Shout out
 
-*to Jen thanks for helping me out with search funk.
+* to Jen thanks for helping me out with search funk.
 
-*to Josh from GA Sydney for the styling tutorial.
+* to Josh from GA Sydney for the styling tutorial.
 
-*to each of my classmates. Your positive attitudes each day and ridiculously creative minds keep me going. :)
+* to each of my classmates. Your positive attitudes each day and ridiculously creative minds keep me going. :)
 
 Status API Training Shop Blog About
