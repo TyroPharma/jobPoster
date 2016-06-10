@@ -1,8 +1,7 @@
-<div class="background">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <a href="/" class="navbar-brand pull-left">jobPoster</a>
+      <a href="/" class="navbar-brand pull-left"><i class="fa fa-briefcase" aria-hidden="true"></i> jobPoster</a>
     </div>
     <div class="navbar-right pull-right">
       <ul class="nav navbar-nav">
@@ -14,19 +13,28 @@
           <a href="/jobs/new">Post Job</a>
         </li>
         <li>
-          <a href="#top" class="page-scroll">Login/Register</a>
+          <a href="#contact" class="page-scroll">Contact</a>
+        </li>
+        <li>
+          <a href="#top" class="page-scroll"><i class="fa fa-user" aria-hidden="true"></i> Login/Register</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="container" id="show">
-<section class="container content-section text-center">
+<div class="background">
+
+<div class="container">
+
   <div class="row">
-    <div class="col-lg-4 col-lg-offset-2">
-          <h2 class="jobdescript">Job Description</h2>
+    <div class="col-centered col-md-12 col-sm-6 col-xs-10 pad-top content-section text-left" id="show">
+      <div class="panel panel-default job-panel">
+        <div class="panel-body">
+          <h2 class="text-center jobdescript">Job Description</h2>
+          <br>
+          <br>
           <div id="jobdescsec">
-            <ul>
+            <ul class="nav">
               <li>
                 <h3>Job Title: <%= @job.title %></h3>
               </li>
@@ -43,10 +51,10 @@
             <br>
             <br>
             <br>
-            <p><%= @job.description %></p>
+            <p id="jobdescription"><%= @job.description %></p>
           </div>
         </div>
       </div>
-    </section>
   </div>
   </div>
+</div>

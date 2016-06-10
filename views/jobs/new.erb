@@ -1,8 +1,7 @@
-<div class="background">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <a href="/" class="navbar-brand pull-left">jobPoster</a>
+      <a href="/" class="navbar-brand pull-left"><i class="fa fa-briefcase" aria-hidden="true"></i> jobPoster</a>
     </div>
     <div class="navbar-right pull-right">
       <ul class="nav navbar-nav">
@@ -14,46 +13,55 @@
           <a href="/jobs/new">Post Job</a>
         </li>
         <li>
-          <a href="#top" class="page-scroll">Login/Register</a>
+          <a href="#contact" class="page-scroll">Contact</a>
+        </li>
+        <li>
+          <a href="#top" class="page-scroll"><i class="fa fa-user" aria-hidden="true"></i> Login/Register</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<div class="background">
 
-    <div class="container">
-      <div class="text-container">
-    <h2>Compose Job</h2>
-    <h3>Job Details</h3>
-    <div class="container">
-    <form class="form-horizontal" action="/jobs" method="post">
-      <div class="form-group">
-          <label for="job[title]">Job Title:</label>
-          <input name="job[title]" class="form-control">
+<div class="container">
+  <div class="row">
+    <div class="col-centered col-md-12 col-sm-6 col-xs-10 pad-top content-section text-container" id="edit">
+      <div class="panel panel-default">
+        <div class="panel-body" id="editpanel">
+          <h1 class="text-center">Job Details</h1>
+          <br>
+          <br>
+          <form class="form-horizontal" action="/jobs" method="post">
+            <div class="form-group">
+              <label for="job[title]">Job Title:</label>
+              <input name="job[title]" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="job[company]">Company Name:</label>
+              <input name="job[company]" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="job[location]">Location:</label>
+              <input name="job[location]" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="job[logo_url]">Company Logo:</label>
+              <input name="job[logo_url]" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="job[contact]">Contact:</label>
+              <input name="job[contact]" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="job[description]">Job Description:</label>
+              <textarea maxlength="2000" cols="35" rows="10" placeholder="Job Description" name="job[description]" class="form-control"></textarea>
+            </div>
+            <input type="submit" value="Create" class="btn btn-dark">
+          </form>
         </div>
-        <div class="form-group">
-          <label for="job[company]">Company Name:</label>
-          <input name="job[company]" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="job[location]">Location:</label>
-          <input name="job[location]" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="job[logo_url]">Company Logo:</label>
-          <input name="job[logo_url]" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="job[contact]">Contact:</label>
-          <input name="job[contact]" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="job[description]">Job Description:</label>
-          <textarea maxlength="2000" cols="35" rows="10" placeholder="Job Description" name="job[description]" class="form-control"></textarea>
-        </div>
-          <input type="submit" value="Create" class="btn btn-primary">
-    </form>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 </div>

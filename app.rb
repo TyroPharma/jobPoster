@@ -9,6 +9,11 @@ class JobPoster < Sinatra::Base
     erb :about
   end
 
+  get '/jobs/search' do
+    @jobs = Job.search(params[:search])
+    p params
+    erb(:"jobs/index")
+  end
   # Restful Job Controller Actions
   #index shows all job results
   get '/jobs' do
@@ -24,7 +29,9 @@ class JobPoster < Sinatra::Base
 
   #create
   post '/jobs' do
-    @job = Job.new(params[:job])
+    #job = params[:job]
+    #job[:title] = job[:title].split.map(&:capitalize).join(" ")
+    @job = Job.new(job)
     if @job.save
       redirect("/jobs/#{@job.id}")
     else

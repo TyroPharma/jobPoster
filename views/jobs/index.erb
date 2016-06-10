@@ -1,8 +1,7 @@
-<div class="background">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <a href="/" class="navbar-brand pull-left">jobPoster</a>
+      <a href="/" class="navbar-brand pull-left"><i class="fa fa-briefcase" aria-hidden="true"></i> jobPoster</a>
     </div>
     <div class="navbar-right pull-right">
       <ul class="nav navbar-nav">
@@ -14,51 +13,60 @@
           <a href="/jobs/new">Post Job</a>
         </li>
         <li>
-          <a href="#top" class="page-scroll">Login/Register</a>
+          <a href="#contact" class="page-scroll">Contact</a>
+        </li>
+        <li>
+          <a href="#top" class="page-scroll"><i class="fa fa-user" aria-hidden="true"></i> Login/Register</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="background">
 
+<div class="container">
   <div class="row">
-    <div class="col-centered col-md-6 col-sm-6 col-xs-10 pad-top content-section text-center">
-      <% @jobs.each do |jobs| %>
+    <div class="col-centered col-md-12 col-sm-6 col-xs-10 pad-top content-section text-left" id="index">
+      <% @jobs.each do |job| %>
       <div class="panel panel-default job-panel" id="index">
         <div class="panel-body">
     <!-- Beginning of Job listings -->
 
-        <ul>
+        <ul class="nav">
           <li>
             <h2>
-              <a href="/jobs/<%= jobs.id %>">
-                <%= jobs.title %>
+              <a href="/jobs/<%= job.id %>">
+                <%= job.title %>
               </a>
             </h2>
           </li>
+          <br>
+          <br>
           <li>
             <h4>
-              <%= jobs.company %>
+              <%= job.company %>
             </h4>
           </li>
           <li>
             <h4>
-              <%= jobs.location %>
+              <%= job.location %>
             </h4>
           </li>
         </ul>
         </div>
         <div class="panel-footer">
-        <ul>
+        <ul class="list-inline">
           <li>
-            <a href="/jobs/<%=jobs.id %>/edit">
-              Edit
+            <a href="/jobs/<%=job.id %>/edit">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
           </li>
           <li>
-            <form action="/jobs/<%= jobs.id %>/delete" method="POST">
-              <button>Delete</button>
+            <form action="/jobs/<%= job.id %>/delete" method="POST">
+              <button id="deletebutton" type="submit" >
+              <i type="submit"  class="fa fa-trash" aria-hidden="true"></i>
+            </button>
             </form>
           </li>
         </ul>
@@ -67,4 +75,6 @@
     <% end %>
   </div>
 </div>
+</div>
+
 </div>
